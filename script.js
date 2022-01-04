@@ -8,7 +8,7 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
 	
 	checkInputs();
-	popup();
+	
 });
 
 function checkInputs() {
@@ -22,7 +22,7 @@ function checkInputs() {
 		setErrorFor(username, 'Username cannot be blank');
 	} else {
 		setSuccessFor(username);
-		c='1';
+		
 	}
 	
 	if(emailValue === '') {
@@ -31,14 +31,14 @@ function checkInputs() {
 		setErrorFor(email, 'Not a valid email');
 	} else {
 		setSuccessFor(email);
-		d='1';
+		
 	}
 	
 	if(passwordValue === '') {
 		setErrorFor(password, 'Password cannot be blank');
 	} else {
 		setSuccessFor(password);
-		e='1';
+		
 	}
 	
 	if(password2Value === '') {
@@ -47,7 +47,7 @@ function checkInputs() {
 		setErrorFor(password2, 'Passwords does not match');
 	} else{
 		setSuccessFor(password2);
-		f='1';
+		
 	}
 }
 
@@ -66,10 +66,4 @@ function setSuccessFor(input) {
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-function popup(){
-	if(c=='1'& f=='1'& e=='1'& f=='1'){
-	swal("Form submitted successfully"," ","success");
-	}
-}
-
 
